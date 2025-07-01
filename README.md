@@ -10,6 +10,20 @@
 
 > Want to dive right in? [Install Pipecat](https://docs.pipecat.ai/getting-started/installation) then try the [quickstart](https://docs.pipecat.ai/getting-started/quickstart).
 
+## Table of Contents
+
+- [🚀 What You Can Build](#-what-you-can-build)
+- [🧠 Why Pipecat?](#-why-pipecat)
+- [🎬 See it in action](#-see-it-in-action)
+- [📱 Client SDKs](#-client-sdks)
+- [🧩 Available services](#-available-services)
+- [⚡ Installation](#-installation)
+- [🏁 Quickstart](#-quickstart)
+- [🧪 Code examples](#-code-examples)
+- [🛠️ Hacking on the framework itself](#-hacking-on-the-framework-itself)
+- [🤝 Contributing](#-contributing)
+- [🛟 Getting help](#-getting-help)
+
 ## 🚀 What You Can Build
 
 - **Voice Assistants** – natural, streaming conversations with AI
@@ -67,15 +81,15 @@ You can connect to Pipecat from any platform using our official SDKs:
 
 📚 [View full services documentation →](https://docs.pipecat.ai/server/services/supported-services)
 
-## ⚡ Getting started
+## ⚡ Installation
 
-You can get started with Pipecat running on your local machine, then move your agent processes to the cloud when you’re ready.
+You can install Pipecat from PyPI and run it locally in just a few commands. Later, you can deploy your agents to the cloud when you’re ready.
 
 ```shell
-# Install the module
+# Install the package
 pip install pipecat-ai
 
-# Set up your environment
+# Set up your environment variables
 cp dot-env.template .env
 ```
 
@@ -83,12 +97,31 @@ To keep things lightweight, only the core framework is included by default. If y
 
 ```shell
 pip install "pipecat-ai[option,...]"
+# e.g. add OpenAI and Deepgram support
+pip install "pipecat-ai[openai,deepgram]"
 ```
+
+## 🏁 Quickstart
+
+The [examples](examples/) directory contains ready-to-run demos. A good place to start is the simple chatbot:
+
+```bash
+git clone https://github.com/pipecat-ai/pipecat.git
+cd pipecat/examples/simple-chatbot/server
+pip install -r requirements.txt
+python server.py
+```
+
+This spins up a basic voice chatbot that you can chat with using any of the provided client options.
 
 ## 🧪 Code examples
 
-- [Foundational](https://github.com/pipecat-ai/pipecat/tree/main/examples/foundational) — small snippets that build on each other, introducing one or two concepts at a time
-- [Example apps](https://github.com/pipecat-ai/pipecat/tree/main/examples/) — complete applications that you can use as starting points for development
+The project comes with many example scripts. They range from short, foundational snippets to full demo applications:
+
+- [Foundational](https://github.com/pipecat-ai/pipecat/tree/main/examples/foundational) – learn concepts one piece at a time
+- [Example apps](https://github.com/pipecat-ai/pipecat/tree/main/examples/) – ready-made projects you can build on
+
+See [examples/README.md](examples/README.md) for details on each demo.
 
 ## 🛠️ Hacking on the framework itself
 
